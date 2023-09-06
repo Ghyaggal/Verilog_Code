@@ -1,0 +1,7 @@
+
+State Machine - |UART_to_TFT|sdram_ctrl_top:sdram_ctrl_top_inst|sdram_ctrl:sdram_ctrl_inst|state
+Name state.WRITE state.READ state.AREF state.IDLE 
+state.IDLE 0 0 0 0 
+state.AREF 0 0 1 1 
+state.READ 0 1 0 1 
+state.WRITE 1 0 0 1 

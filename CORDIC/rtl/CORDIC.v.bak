@@ -1,0 +1,406 @@
+module CORDIC (
+    clk,
+    rst_n,
+    Phase,                  //0~360
+    sin,
+    cos,
+    error
+);
+
+input clk;
+input rst_n;
+input [8:0] Phase;
+
+output [31:0] sin;
+output [31:0] cos;
+output [31:0] error;
+
+`define rot0  32'd2949120     //45*2^16 
+`define rot1  32'd1740992      
+`define rot2  32'd919872       
+`define rot3  32'd466944       
+`define rot4  32'd234368       
+`define rot5  32'd117312       
+`define rot6  32'd58688        
+`define rot7  32'd29312        
+`define rot8  32'd14656        
+`define rot9  32'd7360         
+`define rot10 32'd3648         
+`define rot11 32'd1856         
+`define rot12 32'd896          
+`define rot13 32'd448          
+`define rot14 32'd256          
+`define rot15 32'd128          
+
+parameter Pipeline = 16;
+parameter K = 32'h09b74;    //K=0.607253*2^16
+
+reg signed [31:0] x_0, y_0, z_0;
+reg signed [31:0] x_1, y_1, z_1;
+reg signed [31:0] x_2, y_2, z_2;
+reg signed [31:0] x_3, y_3, z_3;
+reg signed [31:0] x_4, y_4, z_4;
+reg signed [31:0] x_5, y_5, z_5;
+reg signed [31:0] x_6, y_6, z_6;
+reg signed [31:0] x_7, y_7, z_7;
+reg signed [31:0] x_8, y_8, z_8;
+reg signed [31:0] x_9, y_9, z_9;
+reg signed [31:0] x_10, y_10, z_10;
+reg signed [31:0] x_11, y_11, z_11;
+reg signed [31:0] x_12, y_12, z_12;
+reg signed [31:0] x_13, y_13, z_13;
+reg signed [31:0] x_14, y_14, z_14;
+reg signed [31:0] x_15, y_15, z_15;
+reg signed [31:0] x_16, y_16, z_16;
+reg        [1:0]  Quadrant[Pipeline-1:0];
+reg        [1:0]  data_info;
+reg        [1:0]  data_info_n;
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) 
+        data_info <= 2'd0;
+    else 
+        data_info <= data_info_n;
+end
+
+always @(*) begin
+    if (Phase <= 90)
+        data_info_n <= 2'b00;
+    else if ((Phase > 90) && (Phase <= 180))
+        data_info_n <= 2'b01;
+    else if ((Phase > 180) && (Phase <= 270))
+        data_info_n <= 2'b10;
+    else if ((Phase > 270) && (Phase <= 360))
+        data_info_n <= 2'b11;
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        Quadrant[0] <= 2'b00;
+        Quadrant[1] <= 2'b00;
+        Quadrant[2] <= 2'b00;
+        Quadrant[3] <= 2'b00;
+        Quadrant[4] <= 2'b00;
+        Quadrant[5] <= 2'b00;
+        Quadrant[6] <= 2'b00;
+        Quadrant[7] <= 2'b00;
+        Quadrant[8] <= 2'b00;
+        Quadrant[9] <= 2'b00;
+        Quadrant[10] <= 2'b00;
+        Quadrant[11] <= 2'b00;
+        Quadrant[12] <= 2'b00;
+        Quadrant[13] <= 2'b00;
+        Quadrant[14] <= 2'b00;
+        Quadrant[15] <= 2'b00;
+    end else begin
+        Quadrant[0] <= data_info;
+        Quadrant[1] <= Quadrant[0];
+        Quadrant[2] <= Quadrant[1];
+        Quadrant[3] <= Quadrant[2];
+        Quadrant[4] <= Quadrant[3];
+        Quadrant[5] <= Quadrant[4];
+        Quadrant[6] <= Quadrant[5];
+        Quadrant[7] <= Quadrant[6];
+        Quadrant[8] <= Quadrant[7];
+        Quadrant[9] <= Quadrant[8];
+        Quadrant[10] <= Quadrant[9];
+        Quadrant[11] <= Quadrant[10];
+        Quadrant[12] <= Quadrant[11];
+        Quadrant[13] <= Quadrant[12];
+        Quadrant[14] <= Quadrant[13];
+        Quadrant[15] <= Quadrant[14];     
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_0 <= 1'b0;
+        y_0 <= 1'b0;
+        z_0 <= 1'b0; 
+    end else begin
+        x_0 <= K;
+        y_0 <= 0;
+        z_0 <= Phase << 16;
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_1 <= 1'b0;
+        y_1 <= 1'b0;
+        z_1 <= 1'b0; 
+    end else if (z_0[31])begin
+        x_1 <= x_0 + y_0;
+        y_1 <= y_0 - x_0;
+        z_1 <= z_0 + `rot0;
+    end else begin
+        x_1 <= x_0 - y_0;
+        y_1 <= y_0 + x_0;
+        z_1 <= z_0 - `rot0;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_2 <= 1'b0;
+        y_2 <= 1'b0;
+        z_2 <= 1'b0; 
+    end else if (z_1[31])begin
+        x_2 <= x_1 + y_1;
+        y_2 <= y_1 - x_1;
+        z_2 <= z_1 + `rot1;
+    end else begin
+        x_2 <= x_1 - y_1;
+        y_2 <= y_1 + x_1;
+        z_2 <= z_1 - `rot1;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_3 <= 1'b0;
+        y_3 <= 1'b0;
+        z_3 <= 1'b0; 
+    end else if (z_2[31])begin
+        x_3 <= x_2 + y_2;
+        y_3 <= y_2 - x_2;
+        z_3 <= z_2 + `rot2;
+    end else begin
+        x_3 <= x_2 - y_2;
+        y_3 <= y_2 + x_2;
+        z_3 <= z_2 - `rot2;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_4 <= 1'b0;
+        y_4 <= 1'b0;
+        z_4 <= 1'b0; 
+    end else if (z_3[31])begin
+        x_4 <= x_3 + y_3;
+        y_4 <= y_3 - x_3;
+        z_4 <= z_3 + `rot3;
+    end else begin
+        x_4 <= x_3 - y_3;
+        y_4 <= y_3 + x_3;
+        z_4 <= z_3 - `rot3;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_5 <= 1'b0;
+        y_5 <= 1'b0;
+        z_5 <= 1'b0; 
+    end else if (z_4[31])begin
+        x_5 <= x_4 + y_4;
+        y_5 <= y_4 - x_4;
+        z_5 <= z_4 + `rot4;
+    end else begin
+        x_5 <= x_4 - y_4;
+        y_5 <= y_4 + x_4;
+        z_5 <= z_4 - `rot4;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_6 <= 1'b0;
+        y_6 <= 1'b0;
+        z_6 <= 1'b0; 
+    end else if (z_5[31])begin
+        x_6 <= x_5 + y_5;
+        y_6 <= y_5 - x_5;
+        z_6 <= z_5 + `rot5;
+    end else begin
+        x_6 <= x_5 - y_5;
+        y_6 <= y_5 + x_5;
+        z_6 <= z_5 - `rot5;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_7 <= 1'b0;
+        y_7 <= 1'b0;
+        z_7 <= 1'b0; 
+    end else if (z_6[31])begin
+        x_7 <= x_6 + y_6;
+        y_7 <= y_6 - x_6;
+        z_7 <= z_6 + `rot6;
+    end else begin
+        x_7 <= x_6 - y_6;
+        y_7 <= y_6 + x_6;
+        z_7 <= z_6 - `rot6;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_8 <= 1'b0;
+        y_8 <= 1'b0;
+        z_8 <= 1'b0; 
+    end else if (z_7[31])begin
+        x_8 <= x_7 + y_7;
+        y_8 <= y_7 - x_7;
+        z_8 <= z_7 + `rot7;
+    end else begin
+        x_8 <= x_7 - y_7;
+        y_8 <= y_7 + x_7;
+        z_8 <= z_7 - `rot7;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_9 <= 1'b0;
+        y_9 <= 1'b0;
+        z_9 <= 1'b0; 
+    end else if (z_8[31])begin
+        x_9 <= x_8 + y_8;
+        y_9 <= y_8 - x_8;
+        z_9 <= z_8 + `rot8;
+    end else begin
+        x_9 <= x_8 - y_8;
+        y_9 <= y_8 + x_8;
+        z_9 <= z_8 - `rot8;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_10 <= 1'b0;
+        y_10 <= 1'b0;
+        z_10 <= 1'b0; 
+    end else if (z_9[31])begin
+        x_10 <= x_9 + y_9;
+        y_10 <= y_9 - x_9;
+        z_10 <= z_9 + `rot9;
+    end else begin
+        x_10 <= x_9 - y_9;
+        y_10 <= y_9 + x_9;
+        z_10 <= z_9 - `rot9;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_11 <= 1'b0;
+        y_11 <= 1'b0;
+        z_11 <= 1'b0; 
+    end else if (z_10[31])begin
+        x_11 <= x_10 + y_10;
+        y_11 <= y_10 - x_10;
+        z_11 <= z_10 + `rot10;
+    end else begin
+        x_11 <= x_10 - y_10;
+        y_11 <= y_10 + x_10;
+        z_11 <= z_10 - `rot10;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_12 <= 1'b0;
+        y_12 <= 1'b0;
+        z_12 <= 1'b0; 
+    end else if (z_11[31])begin
+        x_12 <= x_11 + y_11;
+        y_12 <= y_11 - x_11;
+        z_12 <= z_11 + `rot11;
+    end else begin
+        x_12 <= x_11 - y_11;
+        y_12 <= y_11 + x_11;
+        z_12 <= z_11 - `rot11;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_13 <= 1'b0;
+        y_13 <= 1'b0;
+        z_13 <= 1'b0; 
+    end else if (z_12[31])begin
+        x_13 <= x_12 + y_12;
+        y_13 <= y_12 - x_12;
+        z_13 <= z_12 + `rot12;
+    end else begin
+        x_13 <= x_12 - y_12;
+        y_13 <= y_12 + x_12;
+        z_13 <= z_12 - `rot12;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_14 <= 1'b0;
+        y_14 <= 1'b0;
+        z_14 <= 1'b0; 
+    end else if (z_13[31])begin
+        x_14 <= x_13 + y_13;
+        y_14 <= y_13 - x_13;
+        z_14 <= z_13 + `rot13;
+    end else begin
+        x_14 <= x_13 - y_13;
+        y_14 <= y_13 + x_13;
+        z_14 <= z_13 - `rot13;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_15 <= 1'b0;
+        y_15 <= 1'b0;
+        z_15 <= 1'b0; 
+    end else if (z_14[31])begin
+        x_15 <= x_14 + y_14;
+        y_15 <= y_14 - x_14;
+        z_15 <= z_14 + `rot14;
+    end else begin
+        x_15 <= x_14 - y_14;
+        y_15 <= y_14 + x_14;
+        z_15 <= z_14 - `rot14;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        x_16 <= 1'b0;
+        y_16 <= 1'b0;
+        z_16 <= 1'b0; 
+    end else if (z_15[31])begin
+        x_16 <= x_15 + y_15;
+        y_16 <= y_15 - x_15;
+        z_16 <= z_15 + `rot15;
+    end else begin
+        x_16 <= x_15 - y_15;
+        y_16 <= y_15 + x_15;
+        z_16 <= z_15 - `rot15;        
+    end
+end
+
+always @(posedge clk or negedge rst_n) begin
+    if (!rst_n) begin
+        sin <= 32'd0;
+        cos <= 32'd0;
+        error <= 32'd0;
+    end else begin
+        error <= z_16;
+        if (Quadrant[15] == 2'b00) begin
+            sin <= y_16;
+            cos <= x_16;
+        end else if (Quadrant[15] == 2'b01) begin
+            sin <= x_16;
+            cos <= ~(y_16) + 1'b1;
+        end else if (Quadrant[15] == 2'b10) begin
+            sin <= ~(y_16) + 1'b1;
+            cos <= ~(x_16) + 1'b1;
+        end else if (Quadrant[15] == 2'b11) begin
+            sin <= ~(x_16) + 1'b1;
+            cos <= y_16;
+        end
+    end
+end
+
+endmodule

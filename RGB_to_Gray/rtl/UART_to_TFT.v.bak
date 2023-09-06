@@ -1,0 +1,134 @@
+module UART_to_TFT (
+    clk,
+    rst_n,
+    Rs232_rx,
+    
+    sd_clk,
+    sd_SA,
+    sd_BA,
+    sd_CKE,
+    sd_CS_N,
+    sd_RAS_N,
+    sd_CAS_N,
+    sd_WE_N,
+    sd_Dq,
+    sd_Dqm,
+
+    TFT_de,
+    TFT_hs,
+    TFT_vs,
+    TFT_clk,
+    TFT_rgb,
+    TFT_pwm
+);
+
+input clk;
+input rst_n;
+input Rs232_rx;
+
+output sd_clk;
+output [12:0] sd_SA;
+output [1:0] sd_BA;
+output sd_CKE;
+output sd_CS_N;
+output sd_RAS_N;
+output sd_CAS_N;
+output sd_WE_N;
+output [15:0] sd_Dq;
+output [1:0] sd_Dqm;
+
+output TFT_de;
+output TFT_hs;
+output TFT_vs;
+output TFT_clk;
+output [15:0] TFT_rgb;
+output TFT_pwm;
+
+wire clk_50M;
+wire clk_33M;
+wire clk_100M;
+
+pll	pll_inst (
+	.areset ( !rst_n ),
+	.inclk0 ( clk ),
+	.c0 ( clk_50M ),
+	.c1 ( clk_33M ),
+	.c2 ( c2_sig ),
+	.c3 ( c3_sig )
+	);
+
+
+wire [7:0] Data_Byte;
+wire Rx_Done;
+uart_rx uart_rx_inst(
+    .clk(clk_50M),
+    .rst_n(rst_n),
+    .uart_rxd(Rs232_rx),
+    .baud_set(0),
+
+    .data(Data_Byte),
+    .Rx_Done(Rx_Done),
+    .uart_state()
+);
+
+
+wire [15:0] rd_data;
+wire TFT_begin;
+reg [1:0]tft_begin_r;	
+always@(posedge clk_50M)
+        tft_begin_r <= {tft_begin_r[0],tft_begin};
+
+tft_lcd tft_lcd_inst(
+    .clk_33M(clk_33M),
+    .rst_n(rst_n),
+    .Data_in({rd_data[7:0], rd_data[15:8]}),
+
+    .Hcount(),
+    .Vcount(),
+
+    .TFT_de(TFT_de),
+    .TFT_hs(TFT_hs),
+    .TFT_vs(TFT_vs),
+    .TFT_clk(TFT_clk),
+    .TFT_rgb(TFT_rgb),
+    .TFT_pwm(TFT_pwm),
+
+    .TFT_begin(TFT_begin)
+);
+
+
+sdram_ctrl_top sdram_ctrl_top_inst(
+    .clk_100m(clk_100M),
+    .rst_n(rst_n),
+    .sd_clk(sd_clk),
+
+    .wr_data(Data_Byte),
+    .wr_en(Rx_Done),
+    .wr_addr(0),
+    .wr_max_addr(800*480),
+    .wr_load(!rst_n),
+    .wr_clk(clk_50M),
+    .wr_full(),
+    .wr_use(),
+
+    .rd_data(rd_data),
+    .rd_en(TFT_de),
+    .rd_addr(0),
+    .rd_max_addr(800*480),
+    .rd_load(tft_begin_r[1]),
+    .rd_clk(clk_33M),
+    .rd_empty(),
+    .rd_use(),
+
+    .SA(sd_SA),
+    .BA(sd_BA),
+    .CS_N(sd_CS_N),
+    .CKE(sd_CKE),
+    .RAS_N(sd_RAS_N),
+    .CAS_N(sd_CAS_N),
+    .WE_N(sd_WE_N),
+    .Dq(sd_Dq),
+    .Dqm(sd_Dqm)
+);
+
+endmodule

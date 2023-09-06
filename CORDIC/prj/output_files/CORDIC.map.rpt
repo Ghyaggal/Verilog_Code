@@ -1,0 +1,592 @@
+Analysis & Synthesis report for CORDIC
+Sat Jul 29 16:59:37 2023
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Registers Packed Into Inferred Megafunctions
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|altsyncram_22b1:altsyncram2
+ 16. Parameter Settings for User Entity Instance: Top-level Entity: |CORDIC
+ 17. Parameter Settings for Inferred Entity Instance: altshift_taps:data_info_rtl_0
+ 18. altshift_taps Parameter Settings by Entity Instance
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus II License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Jul 29 16:59:37 2023       ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Full Version ;
+; Revision Name                      ; CORDIC                                      ;
+; Top-level Entity Name              ; CORDIC                                      ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 2,140                                       ;
+;     Total combinational functions  ; 2,077                                       ;
+;     Dedicated logic registers      ; 1,351                                       ;
+; Total registers                    ; 1351                                        ;
+; Total pins                         ; 130                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 32                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                                      ; CORDIC             ; CORDIC             ;
+; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ; < 0.1%      ;
+;     Processors 7-12        ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; ../rtl/CORDIC.v                  ; yes             ; User Verilog HDL File        ; E:/verilog/CORDIC/rtl/CORDIC.v                                   ;         ;
+; altshift_taps.tdf                ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altshift_taps.tdf ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/altdpram.inc      ;         ;
+; lpm_counter.inc                  ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_counter.inc   ;         ;
+; lpm_compare.inc                  ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_compare.inc   ;         ;
+; lpm_constant.inc                 ; yes             ; Megafunction                 ; d:/altera/15.0/quartus/libraries/megafunctions/lpm_constant.inc  ;         ;
+; db/shift_taps_fkm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/verilog/CORDIC/prj/db/shift_taps_fkm.tdf                      ;         ;
+; db/altsyncram_22b1.tdf           ; yes             ; Auto-Generated Megafunction  ; E:/verilog/CORDIC/prj/db/altsyncram_22b1.tdf                     ;         ;
+; db/cntr_sqf.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/verilog/CORDIC/prj/db/cntr_sqf.tdf                            ;         ;
+; db/cntr_jah.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/verilog/CORDIC/prj/db/cntr_jah.tdf                            ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 2,140     ;
+;                                             ;           ;
+; Total combinational functions               ; 2077      ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 191       ;
+;     -- 3 input functions                    ; 1143      ;
+;     -- <=2 input functions                  ; 743       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 759       ;
+;     -- arithmetic mode                      ; 1318      ;
+;                                             ;           ;
+; Total registers                             ; 1351      ;
+;     -- Dedicated logic registers            ; 1351      ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 130       ;
+; Total memory bits                           ; 32        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 1353      ;
+; Total fan-out                               ; 10031     ;
+; Average fan-out                             ; 2.72      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                 ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node             ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                             ; Library Name ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
+; |CORDIC                                ; 2077 (2067)       ; 1351 (1341)  ; 32          ; 0            ; 0       ; 0         ; 130  ; 0            ; |CORDIC                                                                                         ; work         ;
+;    |altshift_taps:data_info_rtl_0|     ; 10 (0)            ; 10 (0)       ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CORDIC|altshift_taps:data_info_rtl_0                                                           ; work         ;
+;       |shift_taps_fkm:auto_generated|  ; 10 (0)            ; 10 (1)       ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CORDIC|altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated                             ; work         ;
+;          |altsyncram_22b1:altsyncram2| ; 0 (0)             ; 0 (0)        ; 32          ; 0            ; 0       ; 0         ; 0    ; 0            ; |CORDIC|altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|altsyncram_22b1:altsyncram2 ; work         ;
+;          |cntr_jah:cntr3|              ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CORDIC|altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|cntr_jah:cntr3              ; work         ;
+;          |cntr_sqf:cntr1|              ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |CORDIC|altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|cntr_sqf:cntr1              ; work         ;
++----------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                       ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; Name                                                                                               ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+; altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|altsyncram_22b1:altsyncram2|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16           ; 2            ; 16           ; 2            ; 32   ; None ;
++----------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; x_0[0,1,3,7,10,13,14,16..31]            ; Stuck at GND due to stuck port data_in ;
+; y_0[0..31]                              ; Stuck at GND due to stuck port data_in ;
+; z_0[0..15]                              ; Stuck at GND due to stuck port data_in ;
+; z_1[0..15]                              ; Stuck at GND due to stuck port data_in ;
+; z_2[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_3[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_4[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_5[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_6[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_7[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_8[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_9[0..5]                               ; Stuck at GND due to stuck port data_in ;
+; z_10[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_11[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_12[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_13[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_14[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_15[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; z_16[0..5]                              ; Stuck at GND due to stuck port data_in ;
+; error[5]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; error[4]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; error[3]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; error[2]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; error[1]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; error[0]~reg0                           ; Stuck at GND due to stuck port data_in ;
+; x_1[0,1,3,7,10,13,14,16..31]            ; Stuck at GND due to stuck port data_in ;
+; y_1[0,1]                                ; Stuck at GND due to stuck port data_in ;
+; x_2[0]                                  ; Stuck at GND due to stuck port data_in ;
+; y_2[0]                                  ; Stuck at GND due to stuck port data_in ;
+; z_2[7,12]                               ; Merged with z_2[15]                    ;
+; z_2[8..11,13]                           ; Merged with z_2[14]                    ;
+; x_0[2,4..6,8,9,12,15]                   ; Merged with x_0[11]                    ;
+; z_2[6]                                  ; Merged with x_0[11]                    ;
+; x_1[2,4..6,8,9,12,15]                   ; Merged with x_1[11]                    ;
+; y_1[18..31]                             ; Merged with y_1[17]                    ;
+; y_1[2]                                  ; Merged with x_1[11]                    ;
+; y_2[1]                                  ; Merged with x_2[1]                     ;
+; x_2[17..30]                             ; Merged with x_2[31]                    ;
+; y_2[18..30]                             ; Merged with y_2[31]                    ;
+; y_1[7,10,13,14,16,17]                   ; Merged with y_1[3]                     ;
+; y_1[5,6,8,9,11,12,15]                   ; Merged with y_1[4]                     ;
+; y_3[20..31]                             ; Merged with y_3[19]                    ;
+; x_3[19..31]                             ; Merged with x_3[18]                    ;
+; y_2[31]                                 ; Merged with y_2[17]                    ;
+; x_4[20..31]                             ; Merged with x_4[19]                    ;
+; y_4[21..31]                             ; Merged with y_4[20]                    ;
+; y_3[19]                                 ; Merged with y_3[18]                    ;
+; y_5[22..31]                             ; Merged with y_5[21]                    ;
+; x_5[21..31]                             ; Merged with x_5[20]                    ;
+; y_4[20]                                 ; Merged with y_4[19]                    ;
+; x_6[22..31]                             ; Merged with x_6[21]                    ;
+; y_6[23..31]                             ; Merged with y_6[22]                    ;
+; y_5[21]                                 ; Merged with y_5[20]                    ;
+; y_7[27..31]                             ; Merged with y_7[26]                    ;
+; x_7[27..31]                             ; Merged with x_7[26]                    ;
+; y_6[22]                                 ; Merged with y_6[21]                    ;
+; y_2[6,9]                                ; Merged with y_2[12]                    ;
+; y_2[5,8]                                ; Merged with y_2[11]                    ;
+; y_2[7]                                  ; Merged with y_2[10]                    ;
+; x_2[6,9]                                ; Merged with x_2[12]                    ;
+; x_2[5,8]                                ; Merged with x_2[11]                    ;
+; x_2[7]                                  ; Merged with x_2[10]                    ;
+; Total Number of Removed Registers = 403 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++---------------+---------------------------+----------------------------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                                             ;
++---------------+---------------------------+----------------------------------------------------------------------------------------------------+
+; z_0[5]        ; Stuck at GND              ; z_1[5], z_2[5], z_3[5], z_4[5], z_5[5], z_6[5], z_7[5], z_8[5], z_9[5], z_10[5], z_11[5], z_12[5], ;
+;               ; due to stuck port data_in ; z_13[5], z_14[5], z_15[5], z_16[5], error[5]~reg0                                                  ;
+; z_0[4]        ; Stuck at GND              ; z_1[4], z_2[4], z_3[4], z_4[4], z_5[4], z_6[4], z_7[4], z_8[4], z_9[4], z_10[4], z_11[4], z_12[4], ;
+;               ; due to stuck port data_in ; z_13[4], z_14[4], z_15[4], z_16[4], error[4]~reg0                                                  ;
+; z_0[3]        ; Stuck at GND              ; z_1[3], z_2[3], z_3[3], z_4[3], z_5[3], z_6[3], z_7[3], z_8[3], z_9[3], z_10[3], z_11[3], z_12[3], ;
+;               ; due to stuck port data_in ; z_13[3], z_14[3], z_15[3], z_16[3], error[3]~reg0                                                  ;
+; z_0[2]        ; Stuck at GND              ; z_1[2], z_2[2], z_3[2], z_4[2], z_5[2], z_6[2], z_7[2], z_8[2], z_9[2], z_10[2], z_11[2], z_12[2], ;
+;               ; due to stuck port data_in ; z_13[2], z_14[2], z_15[2], z_16[2], error[2]~reg0                                                  ;
+; z_0[1]        ; Stuck at GND              ; z_1[1], z_2[1], z_3[1], z_4[1], z_5[1], z_6[1], z_7[1], z_8[1], z_9[1], z_10[1], z_11[1], z_12[1], ;
+;               ; due to stuck port data_in ; z_13[1], z_14[1], z_15[1], z_16[1], error[1]~reg0                                                  ;
+; z_0[0]        ; Stuck at GND              ; z_1[0], z_2[0], z_3[0], z_4[0], z_5[0], z_6[0], z_7[0], z_8[0], z_9[0], z_10[0], z_11[0], z_12[0], ;
+;               ; due to stuck port data_in ; z_13[0], z_14[0], z_15[0], z_16[0], error[0]~reg0                                                  ;
+; x_0[31]       ; Stuck at GND              ; x_1[31], x_1[30], x_1[29], x_1[28], x_1[27], x_1[26], x_1[25], x_1[24]                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[15]       ; Stuck at GND              ; z_1[15]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[14]       ; Stuck at GND              ; z_1[14]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[13]       ; Stuck at GND              ; z_1[13]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[12]       ; Stuck at GND              ; z_1[12]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[11]       ; Stuck at GND              ; z_1[11]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[10]       ; Stuck at GND              ; z_1[10]                                                                                            ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[9]        ; Stuck at GND              ; z_1[9]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[8]        ; Stuck at GND              ; z_1[8]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[7]        ; Stuck at GND              ; z_1[7]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; z_0[6]        ; Stuck at GND              ; z_1[6]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; y_1[0]        ; Stuck at GND              ; y_2[0]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
+; y_1[1]        ; Stuck at GND              ; x_2[0]                                                                                             ;
+;               ; due to stuck port data_in ;                                                                                                    ;
++---------------+---------------------------+----------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1351  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 53    ;
+; Number of registers using Asynchronous Clear ; 1347  ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 5     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------+
+; Inverted Register Statistics                                                ;
++-------------------------------------------------------------------+---------+
+; Inverted Register                                                 ; Fan out ;
++-------------------------------------------------------------------+---------+
+; altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|dffe4 ; 2       ;
+; Total number of inverted registers = 1                            ;         ;
++-------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions        ;
++----------------------+-----------------+------------+
+; Register Name        ; Megafunction    ; Type       ;
++----------------------+-----------------+------------+
+; Quadrant[0..16][0,1] ; data_info_rtl_0 ; SHIFT_TAPS ;
+; data_info[0,1]       ; data_info_rtl_0 ; SHIFT_TAPS ;
++----------------------+-----------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 5:1                ; 64 bits   ; 192 LEs       ; 128 LEs              ; 64 LEs                 ; Yes        ; |CORDIC|sin[0]~reg0        ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |CORDIC|Phase_r[2]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Source assignments for altshift_taps:data_info_rtl_0|shift_taps_fkm:auto_generated|altsyncram_22b1:altsyncram2 ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |CORDIC ;
++----------------+----------------------------------+--------------------+
+; Parameter Name ; Value                            ; Type               ;
++----------------+----------------------------------+--------------------+
+; Pipeline       ; 16                               ; Signed Integer     ;
+; K              ; 00000000000000001001101101110100 ; Unsigned Binary    ;
++----------------+----------------------------------+--------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: altshift_taps:data_info_rtl_0 ;
++----------------+----------------+----------------------------------------------+
+; Parameter Name ; Value          ; Type                                         ;
++----------------+----------------+----------------------------------------------+
+; WIDTH_BYTEENA  ; 1              ; Untyped                                      ;
+; NUMBER_OF_TAPS ; 1              ; Untyped                                      ;
+; TAP_DISTANCE   ; 18             ; Untyped                                      ;
+; WIDTH          ; 2              ; Untyped                                      ;
+; POWER_UP_STATE ; CLEARED        ; Untyped                                      ;
+; CBXI_PARAMETER ; shift_taps_fkm ; Untyped                                      ;
++----------------+----------------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; altshift_taps Parameter Settings by Entity Instance        ;
++----------------------------+-------------------------------+
+; Name                       ; Value                         ;
++----------------------------+-------------------------------+
+; Number of entity instances ; 1                             ;
+; Entity Instance            ; altshift_taps:data_info_rtl_0 ;
+;     -- NUMBER_OF_TAPS      ; 1                             ;
+;     -- TAP_DISTANCE        ; 18                            ;
+;     -- WIDTH               ; 2                             ;
++----------------------------+-------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 130                         ;
+; cycloneiii_ff         ; 1351                        ;
+;     CLR               ; 1289                        ;
+;     CLR SLD           ; 53                          ;
+;     ENA CLR           ; 5                           ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 2078                        ;
+;     arith             ; 1318                        ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 182                         ;
+;         3 data inputs ; 1135                        ;
+;     normal            ; 760                         ;
+;         0 data inputs ; 17                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 535                         ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 191                         ;
+; cycloneiii_ram_block  ; 2                           ;
+;                       ;                             ;
+; Max LUT depth         ; 8.00                        ;
+; Average LUT depth     ; 3.54                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Full Version
+    Info: Processing started: Sat Jul 29 16:59:26 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CORDIC -c CORDIC
+Info (11104): Parallel Compilation has detected 12 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 6 of the 6 physical processors detected instead.
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/cordic/sim/cordic_tb.v
+    Info (12023): Found entity 1: CORDIC_tb
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog/cordic/rtl/cordic.v
+    Info (12023): Found entity 1: CORDIC
+Info (12127): Elaborating entity "CORDIC" for the top level hierarchy
+Warning (10240): Verilog HDL Always Construct warning at CORDIC.v(73): inferring latch(es) for variable "data_info_n", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at CORDIC.v(73): inferring latch(es) for variable "Phase_r", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "Phase_r[0]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[1]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[2]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[3]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[4]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[5]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[6]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[7]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[8]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[9]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[10]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[11]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[12]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[13]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[14]" at CORDIC.v(77)
+Info (10041): Inferred latch for "Phase_r[15]" at CORDIC.v(77)
+Info (10041): Inferred latch for "data_info_n[0]" at CORDIC.v(77)
+Info (10041): Inferred latch for "data_info_n[1]" at CORDIC.v(77)
+Warning (14026): LATCH primitive "Phase_r[0]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[1]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[2]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[3]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[4]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[5]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[6]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[7]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[8]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[9]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[10]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[11]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[12]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[13]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[14]" is permanently enabled
+Warning (14026): LATCH primitive "Phase_r[15]" is permanently enabled
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276034): Inferred altshift_taps megafunction from the following design logic: "data_info_rtl_0"
+        Info (286033): Parameter NUMBER_OF_TAPS set to 1
+        Info (286033): Parameter TAP_DISTANCE set to 18
+        Info (286033): Parameter WIDTH set to 2
+Info (12130): Elaborated megafunction instantiation "altshift_taps:data_info_rtl_0"
+Info (12133): Instantiated megafunction "altshift_taps:data_info_rtl_0" with the following parameter:
+    Info (12134): Parameter "NUMBER_OF_TAPS" = "1"
+    Info (12134): Parameter "TAP_DISTANCE" = "18"
+    Info (12134): Parameter "WIDTH" = "2"
+Info (12021): Found 1 design units, including 1 entities, in source file db/shift_taps_fkm.tdf
+    Info (12023): Found entity 1: shift_taps_fkm
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_22b1.tdf
+    Info (12023): Found entity 1: altsyncram_22b1
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_sqf.tdf
+    Info (12023): Found entity 1: cntr_sqf
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_jah.tdf
+    Info (12023): Found entity 1: cntr_jah
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "error[0]" is stuck at GND
+    Warning (13410): Pin "error[1]" is stuck at GND
+    Warning (13410): Pin "error[2]" is stuck at GND
+    Warning (13410): Pin "error[3]" is stuck at GND
+    Warning (13410): Pin "error[4]" is stuck at GND
+    Warning (13410): Pin "error[5]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 2275 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 96 output pins
+    Info (21061): Implemented 2143 logic cells
+    Info (21064): Implemented 2 RAM segments
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4878 megabytes
+    Info: Processing ended: Sat Jul 29 16:59:37 2023
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:21
+
+

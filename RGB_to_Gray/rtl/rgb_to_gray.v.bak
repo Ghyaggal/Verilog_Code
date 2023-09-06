@@ -1,0 +1,11 @@
+module rgb_to_gray (
+    
+);
+
+input [15:0] TFT_rgb;
+output [15:0] TFT_gray;
+
+//red
+assign TFT_gray = {TFT_rgb[15:11], TFT_rgb[15:11], 1'b0, TFT_rgb[15:11]};
+
+endmodule

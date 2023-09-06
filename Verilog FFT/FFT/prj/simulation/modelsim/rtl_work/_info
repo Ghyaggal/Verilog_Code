@@ -1,0 +1,83 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/verilog/FFT/prj/simulation/modelsim
+T_opt
+!s110 1691303117
+VmF9]fDKedSjbf;j[RdeQl1
+04 6 4 work FFT_tb fast 0
+=1-e454e8339443-64cf3ccd-150-14b0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vbutterfly
+Z1 !s110 1691303116
+!i10b 1
+!s100 VFF<9zW1ZgLnX@;]jHjIo2
+Ia>ZNi67<;;S>T2^ic;i;10
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1690959929
+8E:/verilog/FFT/rtl/butterfly.v
+FE:/verilog/FFT/rtl/butterfly.v
+L0 3
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1691303116.460000
+!s107 E:/verilog/FFT/rtl/butterfly.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/FFT/rtl|E:/verilog/FFT/rtl/butterfly.v|
+!i113 0
+Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z5 !s92 -vlog01compat -work work +incdir+E:/verilog/FFT/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vFFT
+R1
+!i10b 1
+!s100 GEl[RzL`BM47^8fKTMebj1
+Ic`hfV>P6bmK1j0>ccB1Yc0
+R2
+R0
+w1690958485
+8E:/verilog/FFT/rtl/FFT.v
+FE:/verilog/FFT/rtl/FFT.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1691303116.305000
+!s107 E:/verilog/FFT/rtl/FFT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/FFT/rtl|E:/verilog/FFT/rtl/FFT.v|
+!i113 0
+R4
+R5
+n@f@f@t
+vFFT_tb
+R1
+!i10b 1
+!s100 KiUKjza=D31O>J@I;CEl?3
+IkzIn^Vf5aOkA^KWGnQcdo3
+R2
+R0
+w1690958701
+8E:/verilog/FFT/prj/../sim/FFT_tb.v
+FE:/verilog/FFT/prj/../sim/FFT_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1691303116.570000
+!s107 E:/verilog/FFT/prj/../sim/FFT_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/FFT/prj/../sim|E:/verilog/FFT/prj/../sim/FFT_tb.v|
+!i113 0
+R4
+!s92 -vlog01compat -work work +incdir+E:/verilog/FFT/prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+n@f@f@t_tb

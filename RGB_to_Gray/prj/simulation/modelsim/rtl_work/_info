@@ -1,0 +1,316 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/verilog/RGB_shift/prj/simulation/modelsim
+T_opt
+!s110 1689777615
+Vah]`QQ[XH8J^Ud:0ViajU1
+04 16 4 work median_filter_tb fast 0
+=1-e454e8339443-64b7f5ce-89-de0
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
+n@_opt
+OL;O;10.4;61
+vfifo_rd
+Z1 !s110 1689777611
+!i10b 1
+!s100 9_CI3]f439SA]F>Eg;_P80
+IkXGPSL4H;=nOPk4_RUkNO1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1689423210
+8E:/verilog/RGB_shift/ip/fifo_rd.v
+FE:/verilog/RGB_shift/ip/fifo_rd.v
+Z3 L0 40
+Z4 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1689777611.483000
+!s107 E:/verilog/RGB_shift/ip/fifo_rd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/ip|E:/verilog/RGB_shift/ip/fifo_rd.v|
+!i113 0
+Z5 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 !s92 -vlog01compat -work work +incdir+E:/verilog/RGB_shift/ip -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vfifo_wr
+R1
+!i10b 1
+!s100 [EL7<U3<4RF0W0ihzWMdC1
+Ig8gnlDKG6J1dghO3GzeJM3
+R2
+R0
+w1689423158
+8E:/verilog/RGB_shift/ip/fifo_wr.v
+FE:/verilog/RGB_shift/ip/fifo_wr.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1689777611.391000
+!s107 E:/verilog/RGB_shift/ip/fifo_wr.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/ip|E:/verilog/RGB_shift/ip/fifo_wr.v|
+!i113 0
+R5
+R6
+vmedian_filter_tb
+Z7 !s110 1689777612
+!i10b 1
+!s100 B6SP:mof`<mcmBfzG==RB0
+ICLJi>kZk?Bh3zMZG>g8Pf2
+R2
+R0
+w1689774080
+8E:/verilog/RGB_shift/prj/../sim/median_filter_tb.v
+FE:/verilog/RGB_shift/prj/../sim/median_filter_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1689777612.215000
+!s107 E:/verilog/RGB_shift/prj/../sim/median_filter_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/prj/../sim|E:/verilog/RGB_shift/prj/../sim/median_filter_tb.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+E:/verilog/RGB_shift/prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vmedian_filtering
+!s110 1689777610
+!i10b 1
+!s100 5UWm:P_KS[zbQX<<fGPbT2
+ICfHCjin<gVEUKAZi_W:mJ3
+R2
+R0
+w1689775222
+8E:/verilog/RGB_shift/rtl/median_filtering.v
+FE:/verilog/RGB_shift/rtl/median_filtering.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1689777610.870000
+!s107 E:/verilog/RGB_shift/rtl/median_filtering.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/median_filtering.v|
+!i113 0
+R5
+Z8 !s92 -vlog01compat -work work +incdir+E:/verilog/RGB_shift/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vpll
+R1
+!i10b 1
+!s100 56`C49:V^G@b5ibIXYASB3
+INN8hOG5JUo2GQ3QHL?3l72
+R2
+R0
+w1689412432
+8E:/verilog/RGB_shift/ip/pll.v
+FE:/verilog/RGB_shift/ip/pll.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1689777611.569000
+!s107 E:/verilog/RGB_shift/ip/pll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/ip|E:/verilog/RGB_shift/ip/pll.v|
+!i113 0
+R5
+R6
+vpll_altpll
+R1
+!i10b 1
+!s100 ?4zPlALhL5n8[=18nXBXn0
+I>Xj^@hKFaf^Dj:c`[ZTmK1
+R2
+R0
+w1689419785
+8E:/verilog/RGB_shift/prj/db/pll_altpll.v
+FE:/verilog/RGB_shift/prj/db/pll_altpll.v
+L0 30
+R4
+r1
+!s85 0
+31
+!s108 1689777611.781000
+!s107 E:/verilog/RGB_shift/prj/db/pll_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/prj/db|E:/verilog/RGB_shift/prj/db/pll_altpll.v|
+!i113 0
+R5
+!s92 -vlog01compat -work work +incdir+E:/verilog/RGB_shift/prj/db -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vram
+R1
+!i10b 1
+!s100 8OzCnK^BjD`Te5Dzc2c@G0
+IUl1m3j<RRf`l57e@HLdZi1
+R2
+R0
+w1689773386
+8E:/verilog/RGB_shift/ip/ram.v
+FE:/verilog/RGB_shift/ip/ram.v
+R3
+R4
+r1
+!s85 0
+31
+!s108 1689777611.678000
+!s107 E:/verilog/RGB_shift/ip/ram.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/ip|E:/verilog/RGB_shift/ip/ram.v|
+!i113 0
+R5
+R6
+vrgb_to_gray
+R1
+!i10b 1
+!s100 ]<dOf^XLi5Zl^4DHS@j0H2
+IEj7kWZh?eG<Uh6^NMoS]e2
+R2
+R0
+w1689496528
+8E:/verilog/RGB_shift/rtl/rgb_to_gray.v
+FE:/verilog/RGB_shift/rtl/rgb_to_gray.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777611.013000
+!s107 E:/verilog/RGB_shift/rtl/rgb_to_gray.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/rgb_to_gray.v|
+!i113 0
+R5
+R8
+vsdram_ctrl
+R7
+!i10b 1
+!s100 S6PZ4ARgIeH9o1?l5Tl<X0
+I]5F^BTA@naMinLMA4W`LG1
+R2
+R0
+w1689408579
+8E:/verilog/RGB_shift/rtl/sdram_ctrl.v
+FE:/verilog/RGB_shift/rtl/sdram_ctrl.v
+Z9 FE:/verilog/RGB_shift/rtl/Sdram_Params.h
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777612.089000
+!s107 E:/verilog/RGB_shift/rtl/Sdram_Params.h|E:/verilog/RGB_shift/rtl/sdram_ctrl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/sdram_ctrl.v|
+!i113 0
+R5
+R8
+vsdram_ctrl_top
+R7
+!i10b 1
+!s100 OT>GOUZ>biAIJV3W`MG=]2
+I`1BZdVQc_3HS>JdCf8`k93
+R2
+R0
+w1689409373
+8E:/verilog/RGB_shift/rtl/sdram_ctrl_top.v
+FE:/verilog/RGB_shift/rtl/sdram_ctrl_top.v
+R9
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777612.002000
+!s107 E:/verilog/RGB_shift/rtl/Sdram_Params.h|E:/verilog/RGB_shift/rtl/sdram_ctrl_top.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/sdram_ctrl_top.v|
+!i113 0
+R5
+R8
+vsdram_init
+R1
+!i10b 1
+!s100 W3^HCajElVI:FZT_k3@ce1
+IJIPXJME4M[79P^J]3kaCi0
+R2
+R0
+w1687357102
+8E:/verilog/RGB_shift/rtl/sdram_init.v
+FE:/verilog/RGB_shift/rtl/sdram_init.v
+R9
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777611.868000
+!s107 E:/verilog/RGB_shift/rtl/Sdram_Params.h|E:/verilog/RGB_shift/rtl/sdram_init.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/sdram_init.v|
+!i113 0
+R5
+R8
+vtft_lcd
+R1
+!i10b 1
+!s100 =4^Y58MQkG9VT6>KVi=c_3
+IU34NT`EhCOR@^Jg_?>HB81
+R2
+R0
+w1689422392
+8E:/verilog/RGB_shift/rtl/tft_lcd.v
+FE:/verilog/RGB_shift/rtl/tft_lcd.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777611.280000
+!s107 E:/verilog/RGB_shift/rtl/tft_lcd.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/tft_lcd.v|
+!i113 0
+R5
+R8
+vuart_rx
+R1
+!i10b 1
+!s100 dJ^VaY36i<X[YFJ<ZV6W;2
+I=`X[8Z3[?R>SdPk1865a@2
+R2
+R0
+w1689418566
+8E:/verilog/RGB_shift/rtl/uart_rx.v
+FE:/verilog/RGB_shift/rtl/uart_rx.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777611.191000
+!s107 E:/verilog/RGB_shift/rtl/uart_rx.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/uart_rx.v|
+!i113 0
+R5
+R8
+vUART_to_TFT
+R1
+!i10b 1
+!s100 dcFnmD^BYC6f8a<0<jlDN3
+IS:Ee^RbWjLWImh>`8CCgV3
+R2
+R0
+w1689772783
+8E:/verilog/RGB_shift/rtl/UART_to_TFT.v
+FE:/verilog/RGB_shift/rtl/UART_to_TFT.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1689777611.102000
+!s107 E:/verilog/RGB_shift/rtl/UART_to_TFT.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/verilog/RGB_shift/rtl|E:/verilog/RGB_shift/rtl/UART_to_TFT.v|
+!i113 0
+R5
+R8
+n@u@a@r@t_to_@t@f@t
