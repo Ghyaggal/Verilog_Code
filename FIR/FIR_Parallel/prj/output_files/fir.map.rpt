@@ -1,0 +1,1570 @@
+Analysis & Elaboration report for fir
+Thu Sep 07 19:22:26 2023
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx
+  5. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_cell_inst0
+  6. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+  7. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+  8. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+  9. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 10. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 11. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 12. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 13. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 14. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 15. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 16. Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 17. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx
+ 18. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_cell_inst0
+ 19. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 20. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 21. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 22. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 23. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 24. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 25. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 26. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 27. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 28. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 29. Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 30. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx
+ 31. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_cell_inst0
+ 32. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 33. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 34. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 35. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 36. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 37. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 38. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 39. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 40. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 41. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 42. Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 43. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx
+ 44. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_cell_inst0
+ 45. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 46. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 47. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 48. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 49. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 50. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 51. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 52. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 53. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 54. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 55. Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 56. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx
+ 57. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_cell_inst0
+ 58. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 59. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 60. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 61. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 62. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 63. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 64. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 65. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 66. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 67. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 68. Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 69. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx
+ 70. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_cell_inst0
+ 71. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 72. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 73. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 74. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 75. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 76. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 77. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 78. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 79. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 80. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 81. Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 82. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx
+ 83. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_cell_inst0
+ 84. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 85. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 86. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+ 87. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+ 88. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+ 89. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+ 90. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+ 91. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+ 92. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+ 93. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+ 94. Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+ 95. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx
+ 96. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_cell_inst0
+ 97. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx
+ 98. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx
+ 99. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx
+100. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx
+101. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx
+102. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx
+103. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx
+104. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx
+105. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx
+106. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx
+107. Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx
+108. Analysis & Elaboration Settings
+109. Port Connectivity Checks: "mult:for_multx[7].mult_instx"
+110. Port Connectivity Checks: "mult:for_multx[6].mult_instx"
+111. Port Connectivity Checks: "mult:for_multx[5].mult_instx"
+112. Port Connectivity Checks: "mult:for_multx[4].mult_instx"
+113. Port Connectivity Checks: "mult:for_multx[3].mult_instx"
+114. Port Connectivity Checks: "mult:for_multx[2].mult_instx"
+115. Port Connectivity Checks: "mult:for_multx[1].mult_instx"
+116. Port Connectivity Checks: "mult:for_multx[0].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx"
+117. Port Connectivity Checks: "mult:for_multx[0].mult_instx|mult_cell:mult_cell_inst0"
+118. Port Connectivity Checks: "mult:for_multx[0].mult_instx"
+119. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                       ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Elaboration Status      ; Successful - Thu Sep 07 19:22:26 2023           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; fir                                             ;
+; Top-level Entity Name              ; fir                                             ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; N/A until Partition Merge                       ;
+;     Total combinational functions  ; N/A until Partition Merge                       ;
+;     Dedicated logic registers      ; N/A until Partition Merge                       ;
+; Total registers                    ; N/A until Partition Merge                       ;
+; Total pins                         ; N/A until Partition Merge                       ;
+; Total virtual pins                 ; N/A until Partition Merge                       ;
+; Total memory bits                  ; N/A until Partition Merge                       ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                       ;
+; Total PLLs                         ; N/A until Partition Merge                       ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[0].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[1].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[2].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[3].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[4].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[5].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[6].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; N              ; 13    ; Signed Integer                                   ;
+; M              ; 12    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_cell_inst0 ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                             ;
+; M              ; 12    ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[0].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[1].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[2].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[3].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[4].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[5].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[6].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[7].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[8].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[9].mult_cell_instx ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                           ;
+; M              ; 12    ; Signed Integer                                                                           ;
++----------------+-------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: mult:for_multx[7].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                      ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+; N              ; 13    ; Signed Integer                                                                            ;
+; M              ; 12    ; Signed Integer                                                                            ;
++----------------+-------+-------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                            ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE10F17C8       ;                    ;
+; Top-level entity name                                            ; fir                ; fir                ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++----------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[7].mult_instx" ;
++--------------+-------+----------+------------------------+
+; Port         ; Type  ; Severity ; Details                ;
++--------------+-------+----------+------------------------+
+; mult2[7..0]  ; Input ; Info     ; Stuck at VCC           ;
+; mult2[11..8] ; Input ; Info     ; Stuck at GND           ;
++--------------+-------+----------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[6].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[7..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[5].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[7..6]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[2..1]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[5..3]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[0]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[4].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[4..3]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..8] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[6..5]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[7]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[3].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[6..5]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..7] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[2..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[4]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[2].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[5..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..6] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[1].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[4..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..5] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[0].mult_instx|mult_cell:mult_stepx[10].mult_cell_instx"                 ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; mult1_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; mult2_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[0].mult_instx|mult_cell:mult_cell_inst0" ;
++---------------+-------+----------+-------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                         ;
++---------------+-------+----------+-------------------------------------------------+
+; mult1[24..13] ; Input ; Info     ; Stuck at GND                                    ;
+; mult_acci     ; Input ; Info     ; Stuck at GND                                    ;
++---------------+-------+----------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mult:for_multx[0].mult_instx"                                                               ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; mult2[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[11..4] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; mult2[3]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; mult2[2]     ; Input  ; Info     ; Stuck at GND                                                                        ;
+; rdy          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Thu Sep 07 19:22:17 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off fir -c fir --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog_code/fir/fir_parallel/sim/test.sv
+    Info (12023): Found entity 1: test File: E:/Verilog_Code/FIR/FIR_Parallel/sim/test.sv Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog_code/fir/fir_parallel/rtl/mult_cell.v
+    Info (12023): Found entity 1: mult_cell File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/mult_cell.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog_code/fir/fir_parallel/rtl/mult.v
+    Info (12023): Found entity 1: mult File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/mult.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /verilog_code/fir/fir_parallel/rtl/fir.v
+    Info (12023): Found entity 1: fir File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 1
+Info (12127): Elaborating entity "fir" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at fir.v(31): truncated value with size 32 to match size of target (5) File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 31
+Warning (10230): Verilog HDL assignment warning at fir.v(36): truncated value with size 32 to match size of target (5) File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 36
+Warning (10240): Verilog HDL Always Construct warning at fir.v(29): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 29
+Warning (10230): Verilog HDL assignment warning at fir.v(45): truncated value with size 32 to match size of target (5) File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 45
+Warning (10230): Verilog HDL assignment warning at fir.v(49): truncated value with size 32 to match size of target (5) File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 49
+Info (12128): Elaborating entity "mult" for hierarchy "mult:for_multx[0].mult_instx" File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/fir.v Line: 80
+Info (12128): Elaborating entity "mult_cell" for hierarchy "mult:for_multx[0].mult_instx|mult_cell:mult_cell_inst0" File: E:/Verilog_Code/FIR/FIR_Parallel/rtl/mult.v Line: 44
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 4734 megabytes
+    Info: Processing ended: Thu Sep 07 19:22:27 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
+
+
